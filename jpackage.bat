@@ -1,0 +1,1 @@
+c:\Users\richard\Desktop\jdk-13\bin\jpackage.exe  create-app-image -o dist -i out/artifacts/NaughtyClock_jar -n NaughtyClock --main-class naughtyclock.Main --main-jar NaughtyClock.jar
