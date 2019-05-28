@@ -1,10 +1,13 @@
-Naughty Clock, Java/Linux/Unix version
+# Naughty Clock
 
-Requires JDK 1.5+ and the Arial font bold to be installed
-on the system.
+A count-down or count-up timer clock desktop application.
 
-To run:
-java -jar NaughtyClock.jar
+# Rationale
 
-This version is less tested than the Windows and Mac versions
-and so may have more bugs.
+When I was a school teacher this was useful for timing how long the children misbehaved and then punishing them
+by detaining them for an equal amount of time.
+
+# Warning
+
+I was a junior dev when I wrote this.  It was written for JDK 1.5 and Netbeans forms.  I have updated it to work
+with JDK 13 but otherwise left the mess as-is.

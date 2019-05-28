@@ -22,8 +22,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.ToolTipManager;
-import org.simplericity.macify.eawt.Application;
-import org.simplericity.macify.eawt.DefaultApplication;
+
 
 /**
  *
@@ -35,7 +34,7 @@ public class MyJFrame extends javax.swing.JFrame {
     private boolean halfSecond = true;
     private boolean tensFlag = false;
     private int spaceAtTop,  heightofButtons;
-    Application osx = new DefaultApplication();
+  //  Application osx = new DefaultApplication();
     BufferedImage icon = new BufferedImage(128, 128, BufferedImage.TYPE_4BYTE_ABGR);
     Graphics2D ig = icon.createGraphics();
 
@@ -45,12 +44,12 @@ public class MyJFrame extends javax.swing.JFrame {
             countDown.setSelected(false);
             toFront();
             Toolkit.getDefaultToolkit().beep();
-           if (osx.isMac()) {
-                osx.requestUserAttention(osx.REQUEST_USER_ATTENTION_TYPE_CRITICAL);
-            } else {
+           //if (osx.isMac()) {
+          //      osx.requestUserAttention(osx.REQUEST_USER_ATTENTION_TYPE_CRITICAL);
+         //   } else {
                 setAlwaysOnTop(true);
                 setAlwaysOnTop(onTopButton.isSelected());
-            }
+          //  }
         }
         String minutes = "" + elapsedTime / 60;
         String seconds = "" + elapsedTime % 60;
@@ -70,12 +69,12 @@ public class MyJFrame extends javax.swing.JFrame {
         graphics.clearRect(0, 0, getWidth(), getHeight());
         timeDisplay.paint(graphics);
 
-        if (osx.isMac() && getWidth() > 300) {
-            graphics.setColor(Color.GRAY);
-            graphics.drawLine(getWidth() - 12, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 11);
-            graphics.drawLine(getWidth() - 8, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 7);
-            graphics.drawLine(getWidth() - 3, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 3);
-        }
+//        if (osx.isMac() && getWidth() > 300) {
+//            graphics.setColor(Color.GRAY);
+//            graphics.drawLine(getWidth() - 12, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 11);
+//            graphics.drawLine(getWidth() - 8, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 7);
+//            graphics.drawLine(getWidth() - 3, getHeight() - spaceAtTop - 2, getWidth() - 2, getHeight() - spaceAtTop - 3);
+//        }
 
         // System.out.println("getWidth="+getWidth()+" Height="+jPanel1.getHeight());
 
@@ -88,7 +87,7 @@ public class MyJFrame extends javax.swing.JFrame {
         ig.setColor(Color.BLACK);
         ig.drawRect(0, 30, 127, 44);
         ig.drawString(minutes + ":" + seconds, 0, 70);
-        osx.setApplicationIconImage(icon);
+    //    osx.setApplicationIconImage(icon);
 
 
 

@@ -218,27 +218,27 @@ public class NagDialog extends javax.swing.JDialog {
     }//GEN-LAST:event_formWindowClosing
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-        setAlwaysOnTop(false);
-        try {
-            RegisterDialog dialog = new RegisterDialog(null);
-            if(dialog.getReturnStatus()==dialog.RET_CANCEL) return;
-            String result = Utility.checkCode(dialog.getRegCode());//GEN-LAST:event_RegisterButtonActionPerformed
-            if(!result.startsWith("NaughtyClock V1")) throw new Exception("Wrong version");
-          
-            Properties properties = Utility.getConfig();
-           
-            properties.setProperty("serial", dialog.getRegCode());
-            Utility.saveConfig(properties);
-            Main.setReg(result);
-            setVisible(false);
-            JOptionPane.showMessageDialog(null, result, "Registration", JOptionPane.INFORMATION_MESSAGE);
-            dispose();
-
-
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Code not accepted", "Error!", JOptionPane.ERROR_MESSAGE);
-            ex.printStackTrace();
-        }
+//        setAlwaysOnTop(false);
+//        try {
+//            RegisterDialog dialog = new RegisterDialog(null);
+//            if(dialog.getReturnStatus()==dialog.RET_CANCEL) return;
+//            String result = Utility.checkCode(dialog.getRegCode());//GEN-LAST:event_RegisterButtonActionPerformed
+//            if(!result.startsWith("NaughtyClock V1")) throw new Exception("Wrong version");
+//
+//            Properties properties = Utility.getConfig();
+//
+//            properties.setProperty("serial", dialog.getRegCode());
+//            Utility.saveConfig(properties);
+//            Main.setReg(result);
+//            setVisible(false);
+//            JOptionPane.showMessageDialog(null, result, "Registration", JOptionPane.INFORMATION_MESSAGE);
+//            dispose();
+//
+//
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Code not accepted", "Error!", JOptionPane.ERROR_MESSAGE);
+//            ex.printStackTrace();
+//        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

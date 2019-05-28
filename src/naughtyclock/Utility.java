@@ -35,21 +35,21 @@ import javax.crypto.NoSuchPaddingException;
  */
 public class Utility {
 
-    public static String checkCode(String regCode) throws IOException, IllegalBlockSizeException, NoSuchPaddingException, BadPaddingException, InvalidKeySpecException, UnsupportedEncodingException, InvalidKeyException, NoSuchAlgorithmException {
-        regCode = regCode.replaceAll("\n","");
-        regCode = regCode.replaceAll("\r","");
-        System.out.println(regCode);
-              
-        byte[] encryptedData = new sun.misc.BASE64Decoder().decodeBuffer(regCode);
-        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-        //PublicKey publicKey = keyFactory.generatePublic(new RSAPublicKeySpec(new BigInteger("108162489888887285726359071719536636443950516440407147069856454111661454961420714081884160520345928650309534172228851518299001594324566665546810920078666907228435117260188857657556427627150033403842407021470439449466516121186385812176875045201058627033826870926928673170245420871116142784979633581215484196663"), new BigInteger("65537")));
-         PublicKey publicKey = keyFactory.generatePublic(new RSAPublicKeySpec(new BigInteger("1696308979423718858527789972788320112738283306120813395128211018345015568926972947778939776303752591127353469880645224191879913785209906786786295851966381632193837927721015958980119128549722071797734419282894159506413570728965892997162736420135504698250314810880800708492864734563152513847769273808035457680052085477362104487955039423359690291311522663008111712723457750708996820314653755573926747649527147541803806968831378317020044910407350489812210736277441537"), new BigInteger("65537")));
-        Cipher cipher = Cipher.getInstance("RSA");
-        cipher.init(Cipher.DECRYPT_MODE, publicKey);
-        byte[] decryptedData = cipher.doFinal(encryptedData);
-        String s = new String(decryptedData, "UTF-8");
-        return s;
-    }
+//    public static String checkCode(String regCode) throws IOException, IllegalBlockSizeException, NoSuchPaddingException, BadPaddingException, InvalidKeySpecException, UnsupportedEncodingException, InvalidKeyException, NoSuchAlgorithmException {
+//        regCode = regCode.replaceAll("\n","");
+//        regCode = regCode.replaceAll("\r","");
+//        System.out.println(regCode);
+//
+//        byte[] encryptedData = new sun.misc.BASE64Decoder().decodeBuffer(regCode);
+//        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+//        //PublicKey publicKey = keyFactory.generatePublic(new RSAPublicKeySpec(new BigInteger("108162489888887285726359071719536636443950516440407147069856454111661454961420714081884160520345928650309534172228851518299001594324566665546810920078666907228435117260188857657556427627150033403842407021470439449466516121186385812176875045201058627033826870926928673170245420871116142784979633581215484196663"), new BigInteger("65537")));
+//         PublicKey publicKey = keyFactory.generatePublic(new RSAPublicKeySpec(new BigInteger("1696308979423718858527789972788320112738283306120813395128211018345015568926972947778939776303752591127353469880645224191879913785209906786786295851966381632193837927721015958980119128549722071797734419282894159506413570728965892997162736420135504698250314810880800708492864734563152513847769273808035457680052085477362104487955039423359690291311522663008111712723457750708996820314653755573926747649527147541803806968831378317020044910407350489812210736277441537"), new BigInteger("65537")));
+//        Cipher cipher = Cipher.getInstance("RSA");
+//        cipher.init(Cipher.DECRYPT_MODE, publicKey);
+//        byte[] decryptedData = cipher.doFinal(encryptedData);
+//        String s = new String(decryptedData, "UTF-8");
+//        return s;
+//    }
 
     
 
